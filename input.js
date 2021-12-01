@@ -14,8 +14,6 @@ const setupInput = function (conn) {
 
 
 const handleUserInput = function (key) {
-// console.log(connection)
- 
 switch(key){
   case '\u0003':
     process.exit(0);
@@ -31,13 +29,11 @@ switch(key){
   case 'd':
     connection.write("Move: right");
     break;
+  case 'h':
+    connection.write("Say: watch out!")
 
 }
-
-        };
+};
         
         
         module.exports = setupInput
-        
-        //  connection.write(("Move: up"))
-          //console.log("hello")
