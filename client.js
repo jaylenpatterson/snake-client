@@ -1,4 +1,5 @@
 const net = require("net");
+const setupInput = require("./input");
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
@@ -17,14 +18,10 @@ const connect = function () {
   conn.on('connect', () => {
     conn.write("Name: JXL");
    })
-
-  
-
-
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  return conn;
+  return conn
 };
 module.exports = connect
 
