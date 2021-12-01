@@ -16,15 +16,10 @@ const connect = function () {
 
   conn.on('connect', () => {
     conn.write("Name: JXL");
+   })
 
-    // setTimeout(() => {
-    //   conn.write("Move: up");
-    // }, 500);
-   });
+  
 
-  // conn.on('connect', () => {
-  //   conn.write("Move: up");
-  // });
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
